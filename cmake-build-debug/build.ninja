@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target rpg
 
@@ -49,29 +49,29 @@ cmake_ninja_workdir = /Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug/
 
 build cmake_object_order_depends_target_rpg: phony || CMakeFiles/rpg.dir
 
-build CMakeFiles/rpg.dir/main.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /Users/vnavarro/ceti/POO-2P/rpg/main.cpp || cmake_object_order_depends_target_rpg
-  DEP_FILE = CMakeFiles/rpg.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/rpg.dir
-  OBJECT_FILE_DIR = CMakeFiles/rpg.dir
+build CMakeFiles/rpg.dir/main.cpp.obj: CXX_COMPILER__rpg_unscanned_Debug C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/main.cpp || cmake_object_order_depends_target_rpg
+  DEP_FILE = CMakeFiles\rpg.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\rpg.dir
+  OBJECT_FILE_DIR = CMakeFiles\rpg.dir
 
-build CMakeFiles/rpg.dir/Character/Character.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /Users/vnavarro/ceti/POO-2P/rpg/Character/Character.cpp || cmake_object_order_depends_target_rpg
-  DEP_FILE = CMakeFiles/rpg.dir/Character/Character.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/rpg.dir
-  OBJECT_FILE_DIR = CMakeFiles/rpg.dir/Character
+build CMakeFiles/rpg.dir/Character/Character.cpp.obj: CXX_COMPILER__rpg_unscanned_Debug C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/Character/Character.cpp || cmake_object_order_depends_target_rpg
+  DEP_FILE = CMakeFiles\rpg.dir\Character\Character.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\rpg.dir
+  OBJECT_FILE_DIR = CMakeFiles\rpg.dir\Character
 
-build CMakeFiles/rpg.dir/Player/Player.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /Users/vnavarro/ceti/POO-2P/rpg/Player/Player.cpp || cmake_object_order_depends_target_rpg
-  DEP_FILE = CMakeFiles/rpg.dir/Player/Player.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/rpg.dir
-  OBJECT_FILE_DIR = CMakeFiles/rpg.dir/Player
+build CMakeFiles/rpg.dir/Player/Player.cpp.obj: CXX_COMPILER__rpg_unscanned_Debug C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/Player/Player.cpp || cmake_object_order_depends_target_rpg
+  DEP_FILE = CMakeFiles\rpg.dir\Player\Player.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\rpg.dir
+  OBJECT_FILE_DIR = CMakeFiles\rpg.dir\Player
 
-build CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /Users/vnavarro/ceti/POO-2P/rpg/Enemy/Enemy.cpp || cmake_object_order_depends_target_rpg
-  DEP_FILE = CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o.d
-  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
-  OBJECT_DIR = CMakeFiles/rpg.dir
-  OBJECT_FILE_DIR = CMakeFiles/rpg.dir/Enemy
+build CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj: CXX_COMPILER__rpg_unscanned_Debug C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/Enemy/Enemy.cpp || cmake_object_order_depends_target_rpg
+  DEP_FILE = CMakeFiles\rpg.dir\Enemy\Enemy.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\rpg.dir
+  OBJECT_FILE_DIR = CMakeFiles\rpg.dir\Enemy
 
 
 # =============================================================================
@@ -79,22 +79,24 @@ build CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o: CXX_COMPILER__rpg_unscanned_Debug /U
 
 
 #############################################
-# Link the executable rpg
+# Link the executable rpg.exe
 
-build rpg: CXX_EXECUTABLE_LINKER__rpg_Debug CMakeFiles/rpg.dir/main.cpp.o CMakeFiles/rpg.dir/Character/Character.cpp.o CMakeFiles/rpg.dir/Player/Player.cpp.o CMakeFiles/rpg.dir/Enemy/Enemy.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk
-  OBJECT_DIR = CMakeFiles/rpg.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = rpg
-  TARGET_PDB = rpg.dbg
+build rpg.exe: CXX_EXECUTABLE_LINKER__rpg_Debug CMakeFiles/rpg.dir/main.cpp.obj CMakeFiles/rpg.dir/Character/Character.cpp.obj CMakeFiles/rpg.dir/Player/Player.cpp.obj CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\rpg.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = rpg.exe
+  TARGET_IMPLIB = librpg.dll.a
+  TARGET_PDB = rpg.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cmd.exe /C "cd /D "C:\Users\mikeg\OneDrive\Documentos\CETI Ing\C++\OrientadoObjetos\Practica3\2P-RPG\cmake-build-debug" && "C:\Users\mikeg\OneDrive\Documentos\CETI Ing\Apps\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -105,7 +107,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S/Users/vnavarro/ceti/POO-2P/rpg -B/Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug
+  COMMAND = cmd.exe /C "cd /D "C:\Users\mikeg\OneDrive\Documentos\CETI Ing\C++\OrientadoObjetos\Practica3\2P-RPG\cmake-build-debug" && "C:\Users\mikeg\OneDrive\Documentos\CETI Ing\Apps\CLion 2023.3.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S"C:\Users\mikeg\OneDrive\Documentos\CETI Ing\C++\OrientadoObjetos\Practica3\2P-RPG" -B"C:\Users\mikeg\OneDrive\Documentos\CETI Ing\C++\OrientadoObjetos\Practica3\2P-RPG\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -115,15 +117,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build rpg: phony rpg.exe
+
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/vnavarro/ceti/POO-2P/rpg/cmake-build-debug
+# Folder: C:/Users/mikeg/OneDrive/Documentos/CETI Ing/C++/OrientadoObjetos/Practica3/2P-RPG/cmake-build-debug
 
-build all: phony rpg
+build all: phony rpg.exe
 
 # =============================================================================
 # Built-in targets
@@ -132,14 +136,14 @@ build all: phony rpg
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vnavarro/ceti/POO-2P/rpg/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/aarch64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake /Users/vnavarro/ceti/POO-2P/rpg/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
+build C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/Apps/CLion$ 2023.3.4/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/mikeg/OneDrive/Documentos/CETI$ Ing/C++/OrientadoObjetos/Practica3/2P-RPG/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################
