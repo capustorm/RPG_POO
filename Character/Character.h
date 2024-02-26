@@ -20,6 +20,9 @@ public:
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
+    virtual void setHealth(Character *target, int newHealth){
+        target->health = newHealth;
+    }
 
     string getName();
     int getHealth();

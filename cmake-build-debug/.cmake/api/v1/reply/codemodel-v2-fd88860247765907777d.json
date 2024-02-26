@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/mikeg/OneDrive/Documentos/CETI Ing/C++/OrientadoObjetos/Practica3/2P-RPG/cmake-build-debug",
-		"source" : "C:/Users/mikeg/OneDrive/Documentos/CETI Ing/C++/OrientadoObjetos/Practica3/2P-RPG"
+		"build" : "C:/Users/mikeg/OneDrive/Documentos/CETI Ing/C++/OrientadoObjetos/RPG/2P-RPG/cmake-build-debug",
+		"source" : "C:/Users/mikeg/OneDrive/Documentos/CETI Ing/C++/OrientadoObjetos/RPG/2P-RPG"
 	},
 	"version" : 
 	{
