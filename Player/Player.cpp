@@ -3,8 +3,11 @@
 //
 
 #include "Player.h"
+#include <iostream>
 
-Player::Player(string _name, int _health, int _attack, int _defense, int _speed) : Character(_name, _health, _attack, _defense, _speed) {
+using namespace std;
+
+Player::Player(string _name, int _health, int _attack, int _defense, int _speed) : Character(_name, _health, _attack, _defense, _speed, true) {
     level = 1;
     experience = 0;
 }
@@ -15,8 +18,13 @@ void Player::doAttack(Character *target) {
 
 void Player::takeDamage(int damage) {
     int trueDamage = damage - defense;
-
+    if (trueDamage < 0) {
+        trueDamage = 0;
+    }
     health-= trueDamage;
+
+    cout << name << " took " << trueDamage << " damage!" << endl;
+    cout << name << " has " << health << " health left!" << endl;
 }
 
 void Player::levelUp() {
@@ -29,4 +37,16 @@ void Player::gainExperience(int exp) {
         levelUp();
         experience = 100-experience;
     }
+}
+
+Character* Player::selectTarget(vector<Enemy*> possibleTargets) {
+    int selectedTarget = 0;
+    cout << "Select a target: " << endl;
+    for (int i = 0; i < possibleTargets.size(); i++) {
+        cout << i << ". " << possibleTargets[i]->getName() << endl;
+    }
+
+    //TODO: Add input validation
+    cin >> selectedTarget;
+    return possibleTargets[selectedTarget];
 }
