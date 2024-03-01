@@ -20,6 +20,7 @@ void Enemy::doAttack(Character *target) {
 
 void Enemy::takeDamage(int damage) {
     int trueDamage = damage - defense;
+<<<<<<< HEAD
     if (trueDamage < 0) {
         trueDamage = 0;
     }
@@ -27,6 +28,14 @@ void Enemy::takeDamage(int damage) {
 
     cout << name << " took " << trueDamage << " damage!" << endl;
     cout << name << " has " << health << " health left!" << endl;
+=======
+    health-= trueDamage;
+
+    cout << name << " took " << trueDamage << " damage!" << endl;
+    if(health <= 0) {
+        cout << name << " has been defeated!" << endl;
+    }
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }
 
 int Enemy::getExperience() {
@@ -44,4 +53,20 @@ Character* Enemy::selectTarget(vector<Player*> possibleTargets) {
         }
     }
     return target;
+<<<<<<< HEAD
+=======
+}
+
+Action Enemy::takeAction(vector<Player*> partyMembers) {
+    Action currentAction;
+    currentAction.speed = getSpeed();
+
+    Character* target = selectTarget(partyMembers);
+    currentAction.target = target;
+    currentAction.action = [this, target](){
+        doAttack(target);
+    };
+
+    return currentAction;
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }

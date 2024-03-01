@@ -10,7 +10,10 @@ Character::Character(string _name, int _health, int _attack, int _defense, int _
     defense = _defense;
     speed = _speed;
     isPlayer = _isPlayer;
+<<<<<<< HEAD
     originalHealth = _health;
+=======
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }
 
 string Character::getName() {
@@ -51,6 +54,7 @@ bool Character::flee(Character*target) {
 
     int chance = rand() % 100;
     return chance > 30;
+<<<<<<< HEAD
 }
 
 void Character::defend() {
@@ -59,4 +63,6 @@ void Character::defend() {
 
 void Character::resetDefense() {
     defense = defense / 2;
+=======
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }

@@ -13,4 +13,9 @@ add_executable(rpg main.cpp
         Utils.h
         Combat/Combat.cpp
         Combat/Combat.h
+<<<<<<< HEAD
 )
+=======
+        Combat/Action.cpp
+        Combat/Action.h)
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516

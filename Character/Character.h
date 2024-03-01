@@ -16,7 +16,10 @@ protected:
     int defense;
     int speed;
     bool isPlayer;
+<<<<<<< HEAD
     int originalHealth;
+=======
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 public:
     Character(string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer);
 
@@ -26,7 +29,10 @@ public:
     //TODO: Implementar metodo de defensa
     //Incrementar la defensa un 20% solo por el turno actual
     void defend();
+<<<<<<< HEAD
     void resetDefense();
+=======
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 
     bool flee(Character* target);
     string getName();

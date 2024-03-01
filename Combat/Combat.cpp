@@ -6,7 +6,10 @@
 #include <string>
 #include <iostream>
 #include <utility>
+<<<<<<< HEAD
 #include <algorithm>
+=======
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 
 using namespace std;
 
@@ -72,6 +75,7 @@ Character* Combat::getTarget(Character* attacker) {
     return nullptr;
 }
 
+<<<<<<< HEAD
 int round = 1;
 int defensePlayerTurn = 0;
 int defenseEnemyTurn = 0;
@@ -149,4 +153,65 @@ void Combat::doCombat() {
         }
         round++;
     }
+=======
+void Combat::doCombat() {
+    cout<< "Inicio del combate" << endl;
+    combatPrep();
+    int round = 1;
+    //Este while representa las rondas del combate
+    while(enemies.size() > 0 && partyMembers.size() > 0) {
+        cout<<"Round " << round << endl;
+        vector<Character*>::iterator it = participants.begin();
+        registerActions(it);
+        executeActions(it);
+
+        round++;
+    }
+
+    if(enemies.empty()) {
+        cout << "You win!" << endl;
+    } else {
+        cout << "You lose!" << endl;
+
+    }
+}
+
+void Combat::executeActions(vector<Character*>::iterator participant) {
+    while(!actionQueue.empty()) {
+        Action currentAction = actionQueue.top();
+        currentAction.action();
+        actionQueue.pop();
+
+        //Check if there are any dead characters
+        checkParticipantStatus(*participant);
+        checkParticipantStatus(currentAction.target);
+    }
+}
+
+void Combat::checkParticipantStatus(Character *participant) {
+    if(participant->getHealth() <= 0) {
+        if(participant->getIsPlayer()) {
+            partyMembers.erase(remove(partyMembers.begin(), partyMembers.end(), participant), partyMembers.end());
+        } else {
+            enemies.erase(remove(enemies.begin(), enemies.end(), participant), enemies.end());
+        }
+        participants.erase(remove(participants.begin(), participants.end(), participant), participants.end());
+    }
+}
+
+void Combat::registerActions(vector<Character*>::iterator participantIterator) {
+    //Este while representa el turno de cada participante
+    //La eleccion que cada personaje elije en su turno
+    while(participantIterator != participants.end()) {
+        if((*participantIterator)->getIsPlayer()) {
+            Action playerAction = ((Player*) *participantIterator)->takeAction(enemies);
+            actionQueue.push(playerAction);
+        } else {
+            Action enemyAction = ((Enemy*) *participantIterator)->takeAction(partyMembers);
+            actionQueue.push(enemyAction);
+        }
+
+        participantIterator++;
+    }
+>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }
