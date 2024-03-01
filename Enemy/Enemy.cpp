@@ -20,22 +20,20 @@ void Enemy::doAttack(Character *target) {
 
 void Enemy::takeDamage(int damage) {
     int trueDamage = damage - defense;
-<<<<<<< HEAD
     if (trueDamage < 0) {
         trueDamage = 0;
     }
     health-= trueDamage;
 
-    cout << name << " took " << trueDamage << " damage!" << endl;
-    cout << name << " has " << health << " health left!" << endl;
-=======
-    health-= trueDamage;
+    if(health <= 0) {
+        health = 0;
+    }
 
     cout << name << " took " << trueDamage << " damage!" << endl;
+    cout << name << " has " << health << " health left!" << endl;
     if(health <= 0) {
         cout << name << " has been defeated!" << endl;
     }
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }
 
 int Enemy::getExperience() {
@@ -53,20 +51,31 @@ Character* Enemy::selectTarget(vector<Player*> possibleTargets) {
         }
     }
     return target;
-<<<<<<< HEAD
-=======
 }
 
 Action Enemy::takeAction(vector<Player*> partyMembers) {
     Action currentAction;
-    currentAction.speed = getSpeed();
 
-    Character* target = selectTarget(partyMembers);
-    currentAction.target = target;
-    currentAction.action = [this, target](){
-        doAttack(target);
-    };
+    if (getIsDefending()) {
+        resetDefense();
+    }
+
+    if (getHealth() < getOriginalHealth() * 0.4 && (rand() % 100) < 50) {
+        givePriority();
+        currentAction.target = this;
+        currentAction.action = [this](){
+            defend();
+        };
+        currentAction.speed = getSpeed();
+        resetPriority();
+    } else {
+        Character *target = selectTarget(partyMembers);
+        currentAction.target = target;
+        currentAction.action = [this, target]() {
+            doAttack(target);
+        };
+        currentAction.speed = getSpeed();
+    }
 
     return currentAction;
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }

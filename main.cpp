@@ -3,22 +3,17 @@
 #include "Enemy/Enemy.h"
 #include "Combat/Combat.h"
 #include <vector>
-<<<<<<< HEAD
 
 int main() {
-    Player *player = new Player("Victor", 40, 10, 4, 3);
-=======
-
-
-int main() {
-    Player *player = new Player("Victor", 5, 10, 4, 3);
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
-    Enemy *enemy = new Enemy("Goblin", 15, 6, 2, 5, 10);
-    Enemy *enemy2 = new Enemy("Orc", 15, 6, 2, 5, 10);
+    Player *player = new Player("Michael", 100, 20, 5, 10);
+    Player *player2 = new Player("Arturo", 110, 12, 5, 9);
+    Enemy *enemy = new Enemy("Goblin", 35, 15, 4, 20, 10);
+    Enemy *enemy2 = new Enemy("Orc", 70, 30, 4, 5, 30);
 
     vector<Character*> participants;
 
     participants.push_back(player);
+    participants.push_back(player2);
     participants.push_back(enemy);
     participants.push_back(enemy2);
 
@@ -27,6 +22,9 @@ int main() {
 
     delete player;
     delete enemy;
+    delete player2;
+    delete enemy2;
     delete combat;
     return 0;
 }
+

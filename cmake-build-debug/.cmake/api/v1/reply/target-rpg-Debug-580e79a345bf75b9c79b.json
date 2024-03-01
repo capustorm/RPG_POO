@@ -56,12 +56,8 @@
 				1,
 				3,
 				5,
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-648bb11c610e79727068.json
-				8
-========
 				8,
 				10
->>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-74218701d8779d2f1a3f.json
 			]
 		}
 	],
@@ -102,12 +98,8 @@
 				1,
 				3,
 				5,
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-648bb11c610e79727068.json
-				8
-========
 				8,
 				10
->>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-74218701d8779d2f1a3f.json
 			]
 		},
 		{
@@ -118,12 +110,8 @@
 				4,
 				6,
 				7,
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-648bb11c610e79727068.json
-				9
-========
 				9,
 				11
->>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-74218701d8779d2f1a3f.json
 			]
 		}
 	],
@@ -183,8 +171,6 @@
 			"backtrace" : 1,
 			"path" : "Combat/Combat.h",
 			"sourceGroupIndex" : 1
-<<<<<<<< HEAD:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-648bb11c610e79727068.json
-========
 		},
 		{
 			"backtrace" : 1,
@@ -196,7 +182,6 @@
 			"backtrace" : 1,
 			"path" : "Combat/Action.h",
 			"sourceGroupIndex" : 1
->>>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516:cmake-build-debug/.cmake/api/v1/reply/target-rpg-Debug-74218701d8779d2f1a3f.json
 		}
 	],
 	"type" : "EXECUTABLE"

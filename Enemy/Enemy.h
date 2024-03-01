@@ -9,11 +9,8 @@
 #include "../Character/Character.h"
 #include "../Player/Player.h"
 #include <vector>
-<<<<<<< HEAD
-=======
 #include "../Combat/Action.h"
 
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 class Player;
 
 class Enemy: public Character{
@@ -24,11 +21,7 @@ public:
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     Character* selectTarget(vector<Player*> possibleTargets);
-<<<<<<< HEAD
-=======
     Action takeAction(vector<Player*> partyMembers);
-
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
     int getExperience();
 };
 

@@ -21,17 +21,19 @@ void Player::takeDamage(int damage) {
     if (trueDamage < 0) {
         trueDamage = 0;
     }
+
     health-= trueDamage;
+    if(health <= 0) {
+        health = 0;
+    }
 
     cout << name << " took " << trueDamage << " damage!" << endl;
-<<<<<<< HEAD
     cout << name << " has " << health << " health left!" << endl;
-=======
 
     if(health <= 0) {
         cout << name << " has been defeated!" << endl;
     }
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
+
 }
 
 void Player::levelUp() {
@@ -56,19 +58,28 @@ Character* Player::selectTarget(vector<Enemy*> possibleTargets) {
     //TODO: Add input validation
     cin >> selectedTarget;
     return possibleTargets[selectedTarget];
-<<<<<<< HEAD
-=======
 }
 
 Action Player::takeAction(vector<Enemy*> enemies) {
     int action = 0;
-    cout << "Select an action: " << endl
-    << "1. Attack" << endl;
-
-    //TODO: Validate input
-    cin >> action;
+    while (true) {
+        cout << getName() << " turn!" << endl
+             << "Select an action: " << endl
+             << "1. Attack" << endl
+             << "2. Defend" << endl;
+        cin >> action;
+        if (action == 1 || action == 2) {
+            break;
+        } else {
+            cout << "Invalid action" << endl;
+        }
+    }
     Action currentAction;
     Character* target = nullptr;
+
+    if (getIsDefending()) {
+        resetDefense();
+    }
 
     switch(action) {
         case 1:
@@ -79,11 +90,19 @@ Action Player::takeAction(vector<Enemy*> enemies) {
             };
             currentAction.speed = getSpeed();
             break;
+        case 2:
+            givePriority();
+            currentAction.target = this;
+            currentAction.action = [this](){
+                defend();
+            };
+            currentAction.speed = getSpeed();
+            resetPriority();
+            break;
         default:
             cout << "Invalid action" << endl;
             break;
     }
 
     return currentAction;
->>>>>>> 4ffe2387d8b1139cd9590a46a4fedd97ae226516
 }
