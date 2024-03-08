@@ -61,13 +61,11 @@ Action Enemy::takeAction(vector<Player*> partyMembers) {
     }
 
     if (getHealth() < getOriginalHealth() * 0.4 && (rand() % 100) < 50) {
-        givePriority();
         currentAction.target = this;
         currentAction.action = [this](){
             defend();
         };
-        currentAction.speed = getSpeed();
-        resetPriority();
+        currentAction.speed = DEFENSE_SPEED_PRIORITY;
     } else {
         Character *target = selectTarget(partyMembers);
         currentAction.target = target;

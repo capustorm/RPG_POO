@@ -91,13 +91,11 @@ Action Player::takeAction(vector<Enemy*> enemies) {
             currentAction.speed = getSpeed();
             break;
         case 2:
-            givePriority();
             currentAction.target = this;
             currentAction.action = [this](){
                 defend();
             };
-            currentAction.speed = getSpeed();
-            resetPriority();
+            currentAction.speed = DEFENSE_SPEED_PRIORITY;
             break;
         default:
             cout << "Invalid action" << endl;
