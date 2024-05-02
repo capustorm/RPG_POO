@@ -1,0 +1,3 @@
+C:/Users/mikeg/OneDrive/Documentos/CETI Ingenieria/POO/RPG/RPG_POO/cmake-build-debug/CMakeFiles/rpg.dir
+C:/Users/mikeg/OneDrive/Documentos/CETI Ingenieria/POO/RPG/RPG_POO/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/mikeg/OneDrive/Documentos/CETI Ingenieria/POO/RPG/RPG_POO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
