@@ -137,17 +137,17 @@ void Player::upgradeStats() {
         case 1:
             prevAttack = getAttack();
             upgradeAttack();
-            cout << getName() << " increased the attack of " << prevAttack << " to " << getAttack() << endl;
+            cout << getName() << " increased the attack from " << prevAttack << " to " << getAttack() << endl;
             break;
         case 2:
             prevDefense = getDefense();
             upgradeDefense();
-            cout << getName() << " increased the defense of " << prevDefense << " to " << getDefense() << endl;
+            cout << getName() << " increased the defense from " << prevDefense << " to " << getDefense() << endl;
             break;
         case 3:
             prevSpeed = getSpeed();
             upgradeSpeed();
-            cout << getName() << " increased the speed of " << prevSpeed << " to " << getSpeed() << endl;
+            cout << getName() << " increased the speed from " << prevSpeed << " to " << getSpeed() << endl;
             break;
         default:
             cout << "Invalid option." << endl;
@@ -156,6 +156,8 @@ void Player::upgradeStats() {
 }
 
 void Player::gainExperience(int exp) {
+    cout << getName() << " just received " << exp << " of xp" << endl;
+
     experience += exp;
     if (experience >= 100) {
         levelUp();

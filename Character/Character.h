@@ -33,6 +33,7 @@ public:
     void upgradeAttack();
     void upgradeDefense();
     void upgradeSpeed();
+    void resetHealth();
 
     bool flee(Character* target);
     bool getIsPlayer();

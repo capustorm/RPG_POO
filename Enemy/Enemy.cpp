@@ -82,4 +82,13 @@ Action Enemy::takeAction(vector<Player*> partyMembers) {
     return currentAction;
 }
 
+void Enemy::increaseDifficulty() {
+    health = health * 1.2;
+    attack = attack * 1.2;
+    defense = defense * 1.2;
+    originalHealth = health;
+
+    cout << name << " has increased its difficulty!" << endl;
+}
+
 // ---------------------------------------------------------------------------------------------------------------------

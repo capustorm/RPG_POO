@@ -15,6 +15,7 @@ class Combat {
 
 private:
     vector<Character*> participants;
+    vector<Character*> originalParticipants;
     vector<Player*> partyMembers;
     vector<Enemy*> enemies;
 
@@ -31,7 +32,10 @@ public:
     Combat(vector<Player*> _partyMembers, vector<Enemy*> _enemies);
     Combat();
 
+    vector<Character*> getOriginalParticipants();
+
     void doCombat();
+    void resetHealth();
     void addParticipant(Character *participant);
     string toString();
 };

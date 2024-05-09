@@ -75,6 +75,10 @@ void Character::resetDefense() {
     isDefending = false;
 }
 
+void Character::resetHealth() {
+    health = originalHealth;
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Upgrade functions
 
