@@ -23,10 +23,16 @@ private:
 
 public:
     Player(char* _name, int _health, int _attack, int _defense, int _speed);
+    Player(char* _name, int _health, int _attack, int _defense, int _speed, bool isPlayer, int _level, int _experience);
 
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     void gainExperience(int exp);
+
+    void serialize(const char* filename);
+    void unserialize(const char* filename);
+    static const unsigned int BUFFER_SIZE = sizeof (name) + sizeof(health) + sizeof(attack) + sizeof(defense) + sizeof(speed) + sizeof(isPlayer) + sizeof(level) + sizeof(experience);
+
 
     Character* selectTarget(vector<Enemy*> possibleTargets);
     Action takeAction(vector<Enemy*> enemies);

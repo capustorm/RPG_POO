@@ -4,6 +4,7 @@
 
 #include "Player.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -11,6 +12,11 @@ using namespace std;
 Player::Player(char* _name, int _health, int _attack, int _defense, int _speed) : Character(_name, _health, _attack, _defense, _speed, true) {
     level = 1;
     experience = 0;
+}
+
+Player::Player(char* _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer, int _level, int _experience) : Character(_name, _health, _attack, _defense, _speed, _isPlayer) {
+    level = _level;
+    experience = _experience;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -162,6 +168,66 @@ void Player::gainExperience(int exp) {
     if (experience >= 100) {
         levelUp();
         experience = 100-experience;
+    }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Serialization functions
+
+void Player::serialize(const char* filename) {
+    std::ofstream file(filename); {
+        if (file.is_open()) {
+            file << name << std::endl;
+            file << originalHealth << std::endl;
+            file << attack << std::endl;
+            file << defense << std::endl;
+            file << speed << std::endl;
+            file << isPlayer << std::endl;
+            file << level << std::endl;
+            file << experience << std::endl;
+        } else {
+            std::cout << "Error opening file" << std::endl;
+        }
+    }
+}
+
+// Unserialize the player's attributes
+void Player::unserialize(const char *filename) {
+    std::ifstream file(filename);
+    if (file.is_open()) {
+        file >> name;
+        file >> originalHealth;
+        health = originalHealth;
+        file >> attack;
+        file >> defense;
+        file >> speed;
+        file >> isPlayer;
+        file >> level;
+        file >> experience;
+        file.close();
+
+        cout << "Player loaded successfully!" << endl;
+        cout << toString() << endl;
+    } else {
+        std::cerr << "The file could not be opened. Predefined data will be used instead." << std::endl;
+        while (true) {
+            cout << "Enter your player's name: ";
+            cin >> name;
+            cout << "Are you sure you want to create a new player with the name " << name << "? (y/n): ";
+            char confirm;
+            cin >> confirm;
+            if (confirm == 'y') {
+                break;
+            }
+        }
+        originalHealth = 100;
+        health = originalHealth;
+        attack = 15;
+        defense = 8;
+        speed = 10;
+        isPlayer = true;
+        level = 1;
+        experience = 0;
     }
 }
 

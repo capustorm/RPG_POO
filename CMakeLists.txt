@@ -15,4 +15,5 @@ add_executable(rpg main.cpp
         Combat/Combat.h
         Combat/Action.cpp
         Combat/Action.h
-        Combat/Action.cpp)
+        Combat/Action.cpp
+)

@@ -8,6 +8,8 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.2s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Users/mikeg/OneDrive/Documentos/CETI Ingenieria/POO/RPG/RPG_POO/cmake-build-debug
+CMake Error at CMakeLists.txt:6:
+  Parse error.  Function missing ending ")".  End of file reached.
+
+
+-- Configuring incomplete, errors occurred!
